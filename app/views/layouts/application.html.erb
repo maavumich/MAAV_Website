@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maav</title>
+    <%= csrf_meta_tags %>
+		<%= favicon_link_tag 'nav-logo.png' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= render 'layouts/bootstrap' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+		<%= render 'layouts/navbar' %>
+    <%= yield %>
+  </body>
+</html>
