@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def documents
   end
+
+  def circuits
+  end
 end
