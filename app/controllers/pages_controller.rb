@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def circuits
   end
+
+	def structures
+	end
+
+	def software
+	end
 end
