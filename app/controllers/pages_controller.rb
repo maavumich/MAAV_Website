@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
   def circuits
   end
+
+  def join
+  end
+  
 end
