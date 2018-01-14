@@ -2,24 +2,25 @@ class PagesController < ApplicationController
   def home
   end
 
-  def about
-  end
+ def about
+ end
 
-  def documents
-  end
+ def documents
+ end
 
-  def circuits
-  end
+ def circuits
+ end
 
-
-  def join
-  end
-  
+ def join
+ end
 
  def structures
  end
 
  def software
+ end
+
+ def business
  end
 
 end
