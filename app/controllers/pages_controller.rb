@@ -11,8 +11,12 @@ class PagesController < ApplicationController
  def circuits
  end
 
+
  def join
+	 render layout: 'join'
  end
+
+
 
  def structures
  end
