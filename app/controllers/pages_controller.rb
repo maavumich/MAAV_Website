@@ -17,7 +17,6 @@ class PagesController < ApplicationController
  end
 
 
-
  def structures
  end
 
