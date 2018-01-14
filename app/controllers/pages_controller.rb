@@ -11,7 +11,15 @@ class PagesController < ApplicationController
   def circuits
   end
 
+
   def join
   end
   
+
+ def structures
+ end
+
+ def software
+ end
+
 end

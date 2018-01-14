@@ -1,0 +1,233 @@
+<h1>Welcome to MAAV Software!</h1>
+
+<p>We are very glad that you are here! MAAV is a student-organized project team that
+designs and builds an autonomous quadcopter to compete in the annual
+<a href="http://www.aerialroboticscompetition.org">International Aerial Robotics Competition (IARC)</a>.
+We are currently in the last year of mission 7. We encourage you to visit IARC's
+website to have a better understanding of our competition. We have 4 sub-teams:
+Structure, Circuits, Software, and Business. If you are interested in joining any
+other sub-teams, feel free to contact the corresponding leads:</p>
+
+<ul>
+<li>Structure: Nolan (norr@umich.edu)</li>
+<li>Circuits: Ashish (ashnich@umich.edu)</li>
+<li>Business: Jay (tayade@umich.edu)</li>
+</ul>
+
+<hr />
+
+<h2>MAAV Software</h2>
+
+<p>We have weekly meetings on Tuesdays nights, and workdays on Saturday afternoons. Our office is located
+in the mechatronics lab on the second floor of Wilson Center. Our on-board codebase in
+written in <code>C++</code>, and we use <code>git</code> for version control.  Here is an overview of our software
+architecture:</p>
+
+<p><img src="maav-sw.png" alt="alt text" title="MAAV SW Architecture" width="90%" /></p>
+
+<hr />
+
+<h2>Team organization</h2>
+
+<p>Here is a list of active projects and the problems each is trying to solve.
+Each project leader is also listed, feel free to contact them.</p>
+
+<h3>Strategy</h3>
+
+<p>Project leader: Kasidit Thammajinda (<code>thammaji</code>)<br>
+Problem: Planning at a high level where we should fly to<br>
+Tasks:</p>
+
+<ul>
+<li>Formulating the problem as a Markov Decision Process</li>
+<li>Simulation and real world testing</li>
+</ul>
+
+<h3>Perception: Line detection</h3>
+
+<p>Project leader: Ryan Wunderly (<code>rywunder</code>)<br>
+Problem: Detect lines on the arena<br>
+Tasks:</p>
+
+<ul>
+<li>Improve and refactor existing algorithm (In progress)</li>
+<li>Improve performance with glare</li>
+<li>Research new algorithms</li>
+</ul>
+
+<h3>Perception: Roomba tracking</h3>
+
+<p>Project leader: Adam Dziedzic (<code>dziedada</code>)<br>
+Problem: Detect and track ground robots in the arena<br></p>
+
+<p>Tasks:</p>
+
+<ul>
+<li>Benchmark tracking algorithms (Complete)</li>
+<li>Roomba image dataset annotation</li>
+<li>Combine Kernelized Correlation Filter with particle filters</li>
+</ul>
+
+<h3>Localization</h3>
+
+<p>Project leader: Steven Schulte (<code>spschul</code>)<br>
+Problem: Figure out where in space the quadcopter is<br></p>
+
+<p>Tasks:</p>
+
+<ul>
+<li>Debug existing codebase</li>
+<li>Unit testing</li>
+<li>Integration with simulation for full system testing</li>
+</ul>
+
+<h3>Utilities</h3>
+
+<p>Project leader: Romario Pashollari (<code>rpash</code>)<br>
+Problems: Enable communication between various quadcopter systems
+and create a simulation for quadcopter flight. Maintain Nuc-side communication
+between the Intel Nuc and the Tiva microcontroller<br></p>
+
+<p>Tasks:</p>
+
+<ul>
+<li>Generate noisy data for use by localization</li>
+<li>2D botgui for localization</li>
+<li>Separate the renderer and the simulation</li>
+<li>Draw arbitrary shapes in the sim</li>
+<li>Tune time sync</li>
+</ul>
+
+<h3>Embedded</h3>
+
+<p>Project leader: Sasawat Prankprakma (<code>psasawat</code>)<br>
+Current Problem: Switching to a new microprocessor<br></p>
+
+<p>Tasks:</p>
+
+<ul>
+<li>Migrate existing code base</li>
+</ul>
+
+<hr />
+
+<h2>Getting started</h2>
+
+<p>Here are some steps you should take now to get started:</p>
+
+<ul>
+<li>Read this document and choose project to join.</li>
+<li>Add yourself to the <a href="https://mcommunity.umich.edu/#group:MAAV%20Members">MCommunity mailing list</a>
+(just click join group).</li>
+<li>Contact the leads to get access to Redmine and Slack.</li>
+<li><strong>Complete <a href="http://teamprojects.engin.umich.edu/training/training-sessions#basic1">Wilson center basic trainings</a></strong>
+(This is very important. Please do this ASAP!!)</li>
+<li>Install the virtual machine and get access to the codebase (instruction see below).</li>
+</ul>
+
+<hr />
+
+<h2>Instructions to install virtual machine</h2>
+
+<p>We use Ubuntu 16.04 to write and test our software. The easiest way to get access to this operating system is through a virtual machine.  This part of the document will give you instructions on how to set up a virtual machine pre-made for new MAAV members. (Please contact the leads if you would like to dual boot)
+You may find these <a href="https://docs.google.com/a/umich.edu/presentation/d/1q304DlsANa1LNlFPY_acHmlRjlGdWRvm6QgOVo5aqws/edit?usp=sharing">slides</a>
+helpful.</p>
+
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">Download</a>  and install VirtualBox
+and download <a href="https://drive.google.com/a/umich.edu/file/d/0B2tJjXqFcnAQY0hkWUx2SlJIaGs/view?usp=sharing">this</a>
+image file.</li>
+<li>In VirtualBox, go to <strong>File</strong> > <strong>Import Appliance</strong>, and select the disk image you
+downloaded (may take a while).</li>
+<li>Select the virtual machine that pops up on the left bar, click on settings on
+the top bar, and change the following settings:
+<ul>
+<li><strong>System</strong> > <strong>Motherboard</strong>: I would recommend setting the base memory to half of
+what you have</li>
+<li><strong>System</strong> > <strong>Processor</strong>: I would recommend setting the number of processors to
+half of what you have</li>
+<li><strong>Display</strong> > <strong>Screen</strong>: I would change the Video Memory to at least half of what
+you have</li>
+<li><strong>Ports</strong> > <strong>USB</strong>: Do not enable USB controller</li>
+</ul></li>
+<li>Now you can go ahead and start the VM.</li>
+<li>In your VM guest, go to <strong>Devices</strong> > <strong>Insert Guest Addition CD image</strong>, and install
+the guest additions. The password is <code>impossible</code></li>
+<li>Reboot your Ubuntu system</li>
+<li>(Optional) Go to <strong>System Settings</strong> > <strong>Displays</strong>, and turn down the "scale for
+menu and title bars". This will make your viewing experience much more pleasant</li>
+</ul>
+
+<p>Get access to the code base</p>
+
+<ul>
+<li>Generate your ssh key by running
+<pre>ssh-keygen -t rsa -b 4096 -C "uniqname@umich.edu"</pre>
+(actually use your own uniqname)</li>
+<li>Email your public key (located in <code>~/.ssh/id_rsa.pub</code>) to <code>chengjia@umich.edu</code>,
+and Cheng will give you code access.</li>
+</ul>
+
+<p>Build MAAV SW code</p>
+
+<ul>
+<li>Clone the code base using <code>git</code> version control:<br>
+To clone the <code>navigation</code> repository with <code>atomcore</code> submodule, run the
+following 3 commands in your terminal:<br>
+<pre>git clone git@git.maavumich.org:nav.git
+cd nav
+git submodule init &amp;&amp; git submodule update</pre>
+To clone the <code>control</code> repository (make sure you do this outside your
+navigation repository):<br>
+<pre>git clone git@git.maavumich.org:ctrl.git</pre></li>
+<li>Build <code>navigation</code> code:
+<ul>
+<li>Go to the root directory of the nav repo<br>
+<pre>cd nav</pre></li>
+<li>Make a build directory and go to it<br>
+<pre>mkdir build &amp;&amp; cd build</pre></li>
+<li>Configure <code>CMake</code> (our build system)<br>
+<pre>cmake ..</pre></li>
+<li>Build the code<br>
+<pre>make</pre></li>
+</ul></li>
+</ul>
+
+<p>Please contact one of the leads if you have trouble installing your virtual machine or getting it to run.</p>
+
+<hr />
+
+<h2>Useful links</h2>
+
+<ul>
+<li><a href="http://cs229.stanford.edu/section/cs229-linalg.pdf">Linear Algebra review</a></li>
+</ul>
+
+<hr />
+
+<h2>People on MAAV you should know</h2>
+
+<p>Admin</p>
+
+<ul>
+<li>Ryan Wunderly (<code>rywunder</code>): President, Line Detection Project Leader</li>
+<li>Nicholas Eckardt (<code>neckardt</code>): Project Manager</li>
+</ul>
+
+<p>Software</p>
+
+<ul>
+<li>Sajan Patel (<code>sajanptl</code>): Director of Research, God</li>
+<li>Steven Schulte (<code>spschul</code>): Infrastructure Lead, Localization Project Leader</li>
+<li>Sasawat Prankprakma (<code>psasawat</code>): Ex-Infrastructure Lead</li>
+<li>Cheng Jiang (<code>chengjia</code>): Navigation Lead</li>
+<li>Adam Dziedzic (<code>dziedada</code>): Roomba Tracking Project Leader</li>
+<li>Romario Pashollari (<code>rpash</code>): Utilities Project Leader</li>
+</ul>
+
+<hr />
+
+<p>We hope that this document helps you getting on-board. We wish you luck and please
+don't hesitate to contact any of the leads if you have any questions.</p>
+
+<p><em>Rev. January 2018</em></p>
