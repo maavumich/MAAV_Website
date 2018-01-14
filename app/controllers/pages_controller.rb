@@ -13,8 +13,9 @@ class PagesController < ApplicationController
 
 
   def join
+	render layout: 'join'
   end
-  
+
 
  def structures
  end
