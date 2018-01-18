@@ -9,7 +9,7 @@ gem install rails
 
 1. Clone the repo
 2. Cd into project
-3. bundle install
-4. bundle update
-5. rails db:migrate
-6. rails server will deploy to local host
+3. `bundle install`
+4. `bundle update`
+5. `rails db:migrate`
+6. `rails server` will deploy to local host port:3000
