@@ -1,24 +1,15 @@
-# README
+# Setting up environment
+## Downloading Ruby
+https://github.com/rbenv/rbenv
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Download Rails
+gem install rails
 
-Things you may want to cover:
+# Setting up the project
 
-* Hello world
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone the repo
+2. Cd into project
+3. `bundle install`
+4. `bundle update`
+5. `rails db:migrate`
+6. `rails server` will deploy to local host port:3000
