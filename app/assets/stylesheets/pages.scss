@@ -55,7 +55,7 @@ body {
 }
 
 header.masthead {
-  background: url('about/home.jpeg') no-repeat center center scroll;
+  background-image: asset-data-url('about/home.jpeg') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -87,7 +87,7 @@ header.masthead>.overlay {
 }
 
 #slide-1 {
-	background-image: url('homepage.jpg');
+	background-image: asset-data-url('homepage.jpg');
 	height: 100%;
 	color: #ffffff;
     -webkit-background-size: 100%;
@@ -110,7 +110,7 @@ header.masthead>.overlay {
 
 @media (max-width: 991px) {
 	#slide-1 {
-  background: url('homepage.jpg') no-repeat center center scroll;
+  background-image: asset-image-url('homepage.jpg') no-repeat center center scroll;
 	height: 60%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
