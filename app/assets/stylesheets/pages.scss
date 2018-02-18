@@ -55,17 +55,41 @@ body {
 }
 
 header.masthead {
-  background-image: asset-data-url('about/home.jpeg') no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-bottom: 65px;
+	padding-top: 50px;
+	text-align: center;
+	color: #ffffff;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+	background-attachment: relative;
+	background-position: center center;
+}
+.circuits {
+	background-image: asset-data-url('team/circuits_team.jpg');
+}
+.structures {
+	background-image: asset-data-url('team/structures_team.jpg');
+}
+.software {
+	background-image: asset-data-url('team/software_team.jpg');
+}
+.business {
+	background-image: asset-data-url('team/business_team.jpg');
 }
 
 header.masthead>.overlay {
   padding: 5rem 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 992px) {
